@@ -34,7 +34,7 @@ public class Nonoblock {
             return;
         }
         
-        List<String> ones = data.stream().map(d -> String.valueOf("1").repeat(d)).collect(toList());
+        List<String> ones = data.stream().map(d -> String.valueOf(1).repeat(d)).collect(toList());
         
         List<String> sequences = generateSequences(ones, length - cellSum + 1);
         
@@ -53,7 +53,9 @@ public class Nonoblock {
      */
     public List<String> generateSequences(List<String> ones, int numZeros) {
         if (ones.isEmpty()) {
-            return Arrays.asList(String.valueOf("0").repeat(numZeros));
+            String s = String.valueOf(0).repeat(numZeros);
+            String str[] = s.split("");
+            return Arrays.asList(str);
         }
         
         List<String> result = new ArrayList<>();
@@ -63,7 +65,7 @@ public class Nonoblock {
             List<String> tails = generateSequences(skipOne, numZeros  - x);
             
             for (String tail: tails) {
-                result.add(String.valueOf("0").repeat(x) + ones.get(0) + tail);
+                result.add(String.valueOf(0).repeat(x) + ones.get(0) + tail);
             }
         }
         return result;
