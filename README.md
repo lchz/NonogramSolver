@@ -1,5 +1,6 @@
 # NonogramSolver
 [![CircleCI](https://circleci.com/gh/lchz/NonogramSolver.svg?style=svg)](https://circleci.com/gh/lchz/NonogramSolver)
+[![codecov](https://codecov.io/gh/lchz/NonogramSolver/branch/master/graph/badge.svg)](https://codecov.io/gh/lchz/NonogramSolver)
 
 ## Dokumentaatio
 
