@@ -22,6 +22,12 @@ jacocoTestReport {
         xml.enabled = true
         html.enabled = true
     }
+    afterEvaluate {
+        classDirectories.from = files(classDirectories.files.collect {
+                fileTree(dir: it,
+                         exclude: ['solver/app/**'])
+            })
+    }
 }
 
 javadoc {
