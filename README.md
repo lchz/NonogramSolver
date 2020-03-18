@@ -8,3 +8,4 @@
 
 - ### Viikkoraportit
   - [Viikkoraportti 1](https://github.com/lchz/NonogramSolver/blob/master/documentation/Viikkoraportit/viikko-1.md)
+  - [Viikkoraportti 2](https://github.com/lchz/NonogramSolver/blob/master/documentation/Viikkoraportit/viikko-2.md)
