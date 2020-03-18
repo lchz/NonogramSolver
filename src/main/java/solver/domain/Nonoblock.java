@@ -20,9 +20,9 @@ public class Nonoblock {
 
     /**
      * Prints all possible permutations of this block according to the given list and
-     * the length of the block. The list of data represents how many and in what
-     * order the continuous ones should be in this block. Ones in this case
-     * simulate colour grey in a real Nonogram game.
+     * the length of the block. 
+     * The list of data represents how many and in what order the ones should be. 
+     * Ones in this case simulate black cells in a real Nonogram game.
      *
      * @param data a list of cells to be "1"
      * @param length length of this block
