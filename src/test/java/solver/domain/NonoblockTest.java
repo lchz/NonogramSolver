@@ -12,8 +12,8 @@ import solver.io.StubIO;
  */
 public class NonoblockTest {
 
-    StubIO io;
-    Nonoblock block;
+    private StubIO io;
+    private Nonoblock block;
 
     @Before
     public void setUp() {
