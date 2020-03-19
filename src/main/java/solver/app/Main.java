@@ -34,7 +34,7 @@ public class Main {
         
         List<Integer> data = new ArrayList<>();
         
-        while(true) {
+        while (true) {
             String hint = io.read();
             if (hint.equals("q")) {
                 break;

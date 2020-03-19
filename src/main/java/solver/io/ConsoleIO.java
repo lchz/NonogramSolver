@@ -6,7 +6,7 @@ import java.util.Scanner;
  *
  * @author lchz
  */
-public class ConsoleIO implements IO{
+public class ConsoleIO implements IO {
     
     private Scanner scanner;
     

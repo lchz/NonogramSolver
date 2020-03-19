@@ -6,14 +6,14 @@ import java.util.ArrayList;
  *
  * @author lchz
  */
-public class StubIO implements IO{
-    String[] inputs;
-    ArrayList<String> outputs;
-    int index;
+public class StubIO implements IO {
+    private String[] inputs;
+    private ArrayList<String> outputs;
+    private int index;
     
     public StubIO(String... inputs) {
-        inputs = inputs;
-        outputs = new ArrayList<>();
+        this.inputs = inputs;
+        this.outputs = new ArrayList<>();
     }
     
     

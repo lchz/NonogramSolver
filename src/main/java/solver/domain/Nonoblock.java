@@ -19,8 +19,8 @@ public class Nonoblock {
     }
 
     /**
-     * Prints all possible permutations of this block according to the given list and
-     * the length of the block. 
+     * Prints all possible permutations of this block according to the given 
+     * list and the length of the block. 
      * The list of data represents how many and in what order the ones should be. 
      * Ones in this case simulate black cells in a real Nonogram game.
      *

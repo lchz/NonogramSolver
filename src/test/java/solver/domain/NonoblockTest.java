@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package solver.domain;
 
 import java.util.Arrays;
@@ -28,8 +23,9 @@ public class NonoblockTest {
 
     @Test
     public void generate_sequences_correctly() {
-        
+
         block.printBlock(Arrays.asList(2, 1), 5);
+
         assertEquals("11010", io.getOutput(0));
         assertEquals("11001", io.getOutput(1));
         assertEquals("01101", io.getOutput(2));
