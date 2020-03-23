@@ -1,5 +1,6 @@
 package solver.io;
 
+import java.io.File;
 import java.util.Scanner;
 
 /**
@@ -10,12 +11,13 @@ public class ConsoleIO implements IO {
     
     private Scanner scanner;
     
-    public ConsoleIO() {
+    public ConsoleIO(){
         scanner = new Scanner(System.in);
     }
 
     @Override
     public String read() {
+        scanner = new Scanner(System.in);
         return scanner.nextLine();
     }
 
