@@ -17,6 +17,12 @@ public class Nonoreducer {
         this.rowCandidate = rows;
     }
 
+    /**
+     * Calculates numbers of items that have achieved their common values.
+     * Method returns different states of reduction for further activities.
+     * 
+     * @return the state of reduction
+     */
     public int reduceMutual() {
         int countRemoved1 = reduce(this.colCandidates, this.rowCandidate);
         if (countRemoved1 == -1) {
@@ -31,6 +37,15 @@ public class Nonoreducer {
         return countRemoved1 + countRemoved2;
     }
 
+    /**
+     * Reduces for common items. 
+     * Those without achieving a common value are removed from its list.
+     * If a list of candidates is empty, no common values for both of set a and set b.
+     * 
+     * @param a candidates of a set
+     * @param b candidates of another set
+     * @return number of removed items
+     */
     private int reduce(List<List<String>> a, List<List<String>> b) {
 
         int countRemoved = 0;

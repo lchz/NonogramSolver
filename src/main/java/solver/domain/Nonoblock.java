@@ -12,14 +12,11 @@ import static java.util.stream.Collectors.toList;
 public class Nonoblock {
     
     /**
-     * Prints all possible permutations of this block according to the given
-     * list and the length of the block. The list of data represents how many
-     * and in what order the ones should be. Ones in this case simulate black
-     * cells in a real Nonogram game.
+     * Generates all possible candidates for every line in the lines.
      * 
-     * @param lines a list of cells to be "1"
-     * @param length length of this block
-     * @return All possible combinations for this line
+     * @param lines data for every block in rows or columns
+     * @param length length of the lines
+     * @return All possible combinations for every block in the lines
      */
     public List<List<String>> getCandidates(List<List<String>> lines, int length) {
 
@@ -49,8 +46,8 @@ public class Nonoblock {
     }
 
     /**
-     * Generates all possible permutations of this block. The list of ones
-     * represents in which cell should "1" be.
+     * Generates all possible permutations of this block. 
+     * The list of ones represents in which cells should "1" be.
      *
      * @param ones a list of ones
      * @param numZeros zero numbers in this block
@@ -75,15 +72,28 @@ public class Nonoblock {
         return result;
     }
 
-    private String repeat(int n, String s) {
+    /**
+     * Returns a string with a repeated substring
+     * 
+     * @param n times to repeat
+     * @param substring substring to be repeated
+     * @return 
+     */
+    private String repeat(int n, String substring) {
         String result = "";
         for (int i = 0; i < n; i++) {
-            result += s;
+            result += substring;
         }
 
         return result;
     }
 
+    /**
+     * Converts a string into an integer, if it only consists of integers.
+     * 
+     * @param s string for converting
+     * @return converted integer from string
+     */
     private Integer extractInt(String s) {
         return Integer.parseInt(s);
     }

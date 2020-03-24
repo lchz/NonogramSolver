@@ -12,7 +12,6 @@ import java.util.Scanner;
  */
 public class FileReaderImpl implements FileReader {
 
-    private Scanner scanner;
     private String home;
     private String puzzle;
 
