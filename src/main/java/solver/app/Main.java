@@ -1,9 +1,7 @@
 package solver.app;
 
-import solver.domain.Nonoblock;
 import solver.io.ConsoleIO;
-import java.util.ArrayList;
-import java.util.List;
+import solver.domain.Nonosolver;
 
 /**
  *
@@ -12,48 +10,24 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-//        Nonoblock block = new Nonoblock();
-//        block.printBlock(Arrays.asList(2,1), 5);
-//        System.out.println("");
-//        block.printBlock(Arrays.asList(), 5);
-//        System.out.println("");
-//        block.printBlock(Arrays.asList(8), 10);
-//        System.out.println("");
-//        block.printBlock(Arrays.asList(2,3,2,3), 15);
-//        System.out.println("");
-//        block.printBlock(Arrays.asList(2, 3), 5);
-
+        
         ConsoleIO io = new ConsoleIO();
         
-        io.print("Nonogram block solver!");
-        io.print("Give the length of the block: ");
+        io.print("Please insert your working directory path "
+                + "(on Linux command line '$ pwd' to verify):");
         
-        int length = Integer.parseInt(io.read());
-        
-        io.print("Give hints, press q to stop: ");
-        
-        List<Integer> data = new ArrayList<>();
-        
-        while (true) {
-            String hint = io.read();
-            if (hint.equals("q")) {
-                break;
-            }
-            
-            try {
-                data.add(Integer.parseInt(hint));
-            } catch (NumberFormatException error) {
-                io.print("Invalid input.");
-                io.print("Please insert an integer: ");
-            } 
-        }
-        
-        io.print("Solving the puzzle...");
-        
-        Nonoblock block = new Nonoblock(new ConsoleIO());
-        block.printBlock(data, length);
-        
-    }
-    
-}
+        String home = io.read();
 
+        io.print("Please choose a puzzle:");
+        String puzzle = io.read();
+
+        FileReaderImpl data = new FileReaderImpl(home, puzzle);
+        data.getData();
+
+        io.print("\nPuzzle " + data.getName());
+
+        Nonosolver solver = new Nonosolver(new ConsoleIO());
+        solver.newPuzzle(data.getRows(), data.getColumns());
+    }
+
+}

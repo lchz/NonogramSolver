@@ -1,8 +1,6 @@
-maxrule 4
+title Rabbit
 width 15
 height 15
-title Rabbit
-by Hirofumi Fujiwara
 
 rows
 2

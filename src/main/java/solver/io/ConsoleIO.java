@@ -1,6 +1,5 @@
 package solver.io;
 
-import java.io.File;
 import java.util.Scanner;
 
 /**
@@ -11,7 +10,7 @@ public class ConsoleIO implements IO {
     
     private Scanner scanner;
     
-    public ConsoleIO(){
+    public ConsoleIO() {
         scanner = new Scanner(System.in);
     }
 
@@ -24,6 +23,11 @@ public class ConsoleIO implements IO {
     @Override
     public void print(String string) {
         System.out.println(string);
+    }
+
+    @Override
+    public void printPuzzle(String string) {
+        System.out.print(string);
     }
     
 }
