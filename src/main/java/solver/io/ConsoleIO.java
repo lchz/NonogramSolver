@@ -16,7 +16,7 @@ public class ConsoleIO implements IO {
 
     @Override
     public String read() {
-        scanner = new Scanner(System.in);
+//        scanner = new Scanner(System.in);
         return scanner.nextLine();
     }
 
