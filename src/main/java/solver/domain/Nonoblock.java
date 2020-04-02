@@ -15,7 +15,7 @@ public class Nonoblock {
      * @param length length of the lines
      * @return All possible combinations for every block in the lines
      */
-    public ComList<ComList<String>> getCandidates(ComList<ComList<String>>lines, int length) {
+    public ComList<ComList<String>> getCandidates(ComList<ComList<String>> lines, int length) {
         ComList<ComList<String>> candidates = new ComList<>();
         
         for (ComList<String> line: lines) {
@@ -73,7 +73,7 @@ public class Nonoblock {
     }
 
     /**
-     * Returns a string with a repeated substring
+     * Returns a string with a repeated substring.
      * 
      * @param n times to repeat
      * @param substring a substring to be repeated

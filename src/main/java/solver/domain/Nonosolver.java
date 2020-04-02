@@ -40,7 +40,7 @@ public class Nonosolver {
     }
 
     /**
-     * Prints the results of this puzzle
+     * Prints the results of this puzzle.
      * 
      * @param rowsCandidates the final candidates for rows
      * @param columnsCandidates the final candidates for columns

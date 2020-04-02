@@ -105,8 +105,8 @@ public class Nonoreducer {
                 while (it.hasNext()) {
                     String row = it.next();
                     
-                    if ((commons.contains(fj) && !row.split("")[fi].equals("1")) || 
-                            (!all[fj] && row.split("")[fi].equals("1"))) {
+                    if ((commons.contains(fj) && !row.split("")[fi].equals("1"))
+                           || (!all[fj] && row.split("")[fi].equals("1"))) {
                         it.remove(row);
                         countRemoved++;
                     }
