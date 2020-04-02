@@ -1,11 +1,10 @@
 package solver.domain;
 
-import java.util.Arrays;
-import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import solver.io.StubIO;
+import solver.util.ComList;
 
 /**
  *
@@ -14,29 +13,55 @@ import solver.io.StubIO;
 public class NonosolverTest {
 
     private StubIO io;
-    private List<List<String>> colData;
-    private List<List<String>> rowData;
+    private ComList<ComList<String>> colData;
+    private ComList<ComList<String>> rowData;
 
     @Before
     public void setUp() {
         io = new StubIO();
 
-        List<String> col1 = new java.util.ArrayList<>(Arrays.asList("2"));
-        List<String> col2 = new java.util.ArrayList<>(Arrays.asList("2", "2"));
-        List<String> col3 = new java.util.ArrayList<>(Arrays.asList("3", "1"));
-        List<String> col4 = new java.util.ArrayList<>(Arrays.asList("2"));
-        List<String> col5 = new java.util.ArrayList<>(Arrays.asList("1"));
-        this.colData = new java.util.ArrayList<>(Arrays.asList(col1, col2, col3, col4, col5));
+        ComList<String> col1 = new ComList<>();
+        ComList<String> col2 = new ComList<>();
+        ComList<String> col3 = new ComList<>();
+        ComList<String> col4 = new ComList<>();
+        ComList<String> col5 = new ComList<>(); 
+        col1.add("2");
+        col2.add("2");
+        col2.add("2");
+        col3.add("3");
+        col3.add("1");
+        col4.add("2");
+        col5.add("1");
+        this.colData = new ComList<>();
+        this.colData.add(col1);
+        this.colData.add(col2);
+        this.colData.add(col3);
+        this.colData.add(col4);
+        this.colData.add(col5);
     }
 
     @Test
     public void newPuzzle_with_solution_test() {
-        List<String> row1 = new java.util.ArrayList<>(Arrays.asList("2"));
-        List<String> row2 = new java.util.ArrayList<>(Arrays.asList("3"));
-        List<String> row3 = new java.util.ArrayList<>(Arrays.asList("1", "1"));
-        List<String> row4 = new java.util.ArrayList<>(Arrays.asList("1", "1"));
-        List<String> row5 = new java.util.ArrayList<>(Arrays.asList("4"));
-        this.rowData = new java.util.ArrayList<>(Arrays.asList(row1, row2, row3, row4, row5));
+        ComList<String> row1 = new ComList<>();
+        ComList<String> row2 = new ComList<>();
+        ComList<String> row3 = new ComList<>();
+        ComList<String> row4 = new ComList<>();
+        ComList<String> row5 = new ComList<>();
+        
+        row1.add("2");
+        row2.add("3");
+        row3.add("1");
+        row3.add("1");
+        row4.add("1");
+        row4.add("1");
+        row5.add("4");
+        
+        this.rowData = new ComList<>();
+        rowData.add(row1);
+        rowData.add(row2);
+        rowData.add(row3);
+        rowData.add(row4);
+        rowData.add(row5);
 
         Nonosolver solver = new Nonosolver(io);
         solver.newPuzzle(rowData, colData);
@@ -55,12 +80,27 @@ public class NonosolverTest {
 
     @Test
     public void newPuzzle_no_solution_test() {
-        List<String> row1 = new java.util.ArrayList<>(Arrays.asList("2"));
-        List<String> row2 = new java.util.ArrayList<>(Arrays.asList("3"));
-        List<String> row3 = new java.util.ArrayList<>(Arrays.asList("1", "1"));
-        List<String> row4 = new java.util.ArrayList<>(Arrays.asList("1", "1"));
-        List<String> row5 = new java.util.ArrayList<>(Arrays.asList("5"));
-        this.rowData = new java.util.ArrayList<>(Arrays.asList(row1, row2, row3, row4, row5));
+        
+        ComList<String> row1 = new ComList<>();
+        ComList<String> row2 = new ComList<>();
+        ComList<String> row3 = new ComList<>();
+        ComList<String> row4 = new ComList<>();
+        ComList<String> row5 = new ComList<>();
+        
+        row1.add("2");
+        row2.add("3");
+        row3.add("1");
+        row3.add("1");
+        row4.add("1");
+        row4.add("1");
+        row5.add("5");
+        
+        this.rowData = new ComList<>();
+        rowData.add(row1);
+        rowData.add(row2);
+        rowData.add(row3);
+        rowData.add(row4);
+        rowData.add(row5);
 
         Nonosolver solver = new Nonosolver(io);
         solver.newPuzzle(rowData, colData);

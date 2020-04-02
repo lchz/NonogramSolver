@@ -1,9 +1,8 @@
 package solver.domain;
 
-import java.util.Arrays;
-import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import solver.util.ComList;
 
 /**
  *
@@ -11,28 +10,86 @@ import static org.junit.Assert.*;
  */
 public class NonoreducerTest {
 
-    private List<List<String>> colCandidates;
-    private List<List<String>> rowCandidates;
+    private ComList<ComList<String>> colCandidates;
+    private ComList<ComList<String>> rowCandidates;
 
 
     @Test
     public void reduceMutual_correctly() {
-        List<String> row1 = new java.util.ArrayList<>(Arrays.asList("11000", "01100", "00110", "00011"));
-        List<String> row2 = new java.util.ArrayList<>(Arrays.asList("11100", "01110", "00111"));
-        List<String> row3 = new java.util.ArrayList<>(Arrays.asList("10100", "10010", "10001", "01010", "01001", "00101"));
-        List<String> row4 = new java.util.ArrayList<>(Arrays.asList("10100", "10010", "10001", "01010", "01001", "00101"));
-        List<String> row5 = new java.util.ArrayList<>(Arrays.asList("11110", "01111"));
-        this.rowCandidates = new java.util.ArrayList<>(Arrays.asList(row1, row2, row3, row4, row5));
+        ComList<String> row1 = new ComList<>();
+        ComList<String> row2 = new ComList<>();
+        ComList<String> row3 = new ComList<>();
+        ComList<String> row4 = new ComList<>();
+        ComList<String> row5 = new ComList<>();
+        row1.add("11000");
+        row1.add("01100");
+        row1.add("00110");
+        row1.add("00011");
+        
+        row2.add("11100");
+        row2.add("01110");
+        row2.add("00111");
+        
+        row3.add("10100");
+        row3.add("10010");
+        row3.add("10001");
+        row3.add("01010");
+        row3.add("01001");
+        row3.add("00101");
+        
+        row4.add("10100");
+        row4.add("10010");
+        row4.add("10001");
+        row4.add("01010");
+        row4.add("01001");
+        row4.add("00101");
+        
+        row5.add("11110");
+        row5.add("01111");
+        
+        this.rowCandidates = new ComList<>();
+        this.rowCandidates.add(row1);
+        this.rowCandidates.add(row2);
+        this.rowCandidates.add(row3);
+        this.rowCandidates.add(row4);
+        this.rowCandidates.add(row5);
 
-        List<String> col1 = new java.util.ArrayList<>(Arrays.asList("11000", "01100", "00110", "00011"));
-        List<String> col2 = new java.util.ArrayList<>(Arrays.asList("11011"));
-        List<String> col3 = new java.util.ArrayList<>(Arrays.asList("11101"));
-        List<String> col4 = new java.util.ArrayList<>(Arrays.asList("11000", "01100", "00110", "00011"));
-        List<String> col5 = new java.util.ArrayList<>(Arrays.asList("10000", "01000", "00100", "00010", "00001"));
-        this.colCandidates = new java.util.ArrayList<>(Arrays.asList(col1, col2, col3, col4, col5));
+        ComList<String> col1 = new ComList<>();
+        ComList<String> col2 = new ComList<>();
+        ComList<String> col3 = new ComList<>();
+        ComList<String> col4 = new ComList<>();
+        ComList<String> col5 = new ComList<>();
+        
+        col1.add("11000");
+        col1.add("01100");
+        col1.add("00110");
+        col1.add("00011");
+        
+        col2.add("11011");
+        
+        col3.add("11101");
+        
+        col4.add("11000");
+        col4.add("01100");
+        col4.add("00110");
+        col4.add("00011");
+        
+        col5.add("10000");
+        col5.add("01000");
+        col5.add("00100");
+        col5.add("00010");
+        col5.add("00001");
+
+        
+        this.colCandidates = new ComList<>();
+        this.colCandidates.add(col1);
+        this.colCandidates.add(col2);
+        this.colCandidates.add(col3);
+        this.colCandidates.add(col4);
+        this.colCandidates.add(col5);
 
         int num = new Nonoreducer(this.colCandidates, this.rowCandidates).reduceMutual();
-        assertEquals(12, num);
+        assertEquals(20, num);
 
         int num2 = new Nonoreducer(this.colCandidates, this.rowCandidates).reduceMutual();
         assertEquals(6, num2);
@@ -44,22 +101,78 @@ public class NonoreducerTest {
 
     @Test
     public void return_neg1_if_rowCandidates_empty() {
-        List<String> row1 = new java.util.ArrayList<>(Arrays.asList("11000", "01100", "00110", "00011"));
-        List<String> row2 = new java.util.ArrayList<>(Arrays.asList("11100", "01110", "00111"));
-        List<String> row3 = new java.util.ArrayList<>(Arrays.asList("10100", "10010", "10001", "01010", "01001", "00101"));
-        List<String> row4 = new java.util.ArrayList<>(Arrays.asList("10100", "10010", "10001", "01010", "01001", "00101"));
-        List<String> row5 = new java.util.ArrayList<>(Arrays.asList("11110", "01111"));
-        this.rowCandidates = new java.util.ArrayList<>(Arrays.asList(row1, row2, row3, row4, row5));
-
-        List<String> col1 = new java.util.ArrayList<>(Arrays.asList("11000", "01100", "00110", "00011"));
-        List<String> col2 = new java.util.ArrayList<>(Arrays.asList("11011"));
-        List<String> col3 = new java.util.ArrayList<>(Arrays.asList("11101"));
-        List<String> col4 = new java.util.ArrayList<>(Arrays.asList("11000", "01100", "00110", "00011"));
-        List<String> col5 = new java.util.ArrayList<>(Arrays.asList("11000", "01100", "00110", "00011"));
-        this.colCandidates = new java.util.ArrayList<>(Arrays.asList(col1, col2, col3, col4, col5));
-
+        ComList<String> row1 = new ComList<>();
+        ComList<String> row2 = new ComList<>();
+        ComList<String> row3 = new ComList<>();
+        ComList<String> row4 = new ComList<>();
+        ComList<String> row5 = new ComList<>();
+        row1.add("11000");
+        row1.add("01100");
+        row1.add("00110");
+        row1.add("00011");
+        
+        row2.add("11100");
+        row2.add("01110");
+        row2.add("00111");
+        
+        row3.add("10100");
+        row3.add("10010");
+        row3.add("10001");
+        row3.add("01010");
+        row3.add("01001");
+        row3.add("00101");
+        
+        row4.add("10100");
+        row4.add("10010");
+        row4.add("10001");
+        row4.add("01010");
+        row4.add("01001");
+        row4.add("00101");
+        
+        row5.add("11110");
+        row5.add("01111");
+        
+        this.rowCandidates = new ComList<>();
+        this.rowCandidates.add(row1);
+        this.rowCandidates.add(row2);
+        this.rowCandidates.add(row3);
+        this.rowCandidates.add(row4);
+        this.rowCandidates.add(row5);
+        
+        ComList<String> col1 = new ComList<>();
+        ComList<String> col2 = new ComList<>();
+        ComList<String> col3 = new ComList<>();
+        ComList<String> col4 = new ComList<>();
+        ComList<String> col5 = new ComList<>();
+        
+        col1.add("11000");
+        col1.add("01100");
+        col1.add("00110");
+        col1.add("00011");
+        
+        col2.add("11011");
+        
+        col3.add("11101");
+        
+        col4.add("11000");
+        col4.add("01100");
+        col4.add("00110");
+        col4.add("00011");
+        
+        col5.add("11000");
+        col5.add("01100");
+        col5.add("00110");
+        col5.add("00011");
+        
+        this.colCandidates = new ComList<>();
+        this.colCandidates.add(col1);
+        this.colCandidates.add(col2);
+        this.colCandidates.add(col3);
+        this.colCandidates.add(col4);
+        this.colCandidates.add(col5);
+        
         int num = new Nonoreducer(this.colCandidates, this.rowCandidates).reduceMutual();
-        assertEquals(12, num);
+        assertEquals(20, num);
 
         int num2 = new Nonoreducer(this.colCandidates, this.rowCandidates).reduceMutual();
         assertEquals(-1, num2);
@@ -67,19 +180,75 @@ public class NonoreducerTest {
 
     @Test
     public void return_neg1_if_colCandidates_empty() {
-        List<String> row1 = new java.util.ArrayList<>(Arrays.asList("11000", "01100", "00110", "00011"));
-        List<String> row2 = new java.util.ArrayList<>(Arrays.asList("11100", "01110", "00111"));
-        List<String> row3 = new java.util.ArrayList<>(Arrays.asList("10100", "10010", "10001", "01010", "01001", "00101"));
-        List<String> row4 = new java.util.ArrayList<>(Arrays.asList("10100", "10010", "10001", "01010", "01001", "00101"));
-        List<String> row5 = new java.util.ArrayList<>(Arrays.asList("11111"));
-        this.rowCandidates = new java.util.ArrayList<>(Arrays.asList(row1, row2, row3, row4, row5));
+        ComList<String> row1 = new ComList<>();
+        ComList<String> row2 = new ComList<>();
+        ComList<String> row3 = new ComList<>();
+        ComList<String> row4 = new ComList<>();
+        ComList<String> row5 = new ComList<>();
+        row1.add("11000");
+        row1.add("01100");
+        row1.add("00110");
+        row1.add("00011");
+        
+        row2.add("11100");
+        row2.add("01110");
+        row2.add("00111");
+        
+        row3.add("10100");
+        row3.add("10010");
+        row3.add("10001");
+        row3.add("01010");
+        row3.add("01001");
+        row3.add("00101");
+        
+        row4.add("10100");
+        row4.add("10010");
+        row4.add("10001");
+        row4.add("01010");
+        row4.add("01001");
+        row4.add("00101");
+        
+        row5.add("11111");
+        
+        this.rowCandidates = new ComList<>();
+        this.rowCandidates.add(row1);
+        this.rowCandidates.add(row2);
+        this.rowCandidates.add(row3);
+        this.rowCandidates.add(row4);
+        this.rowCandidates.add(row5);
 
-        List<String> col1 = new java.util.ArrayList<>(Arrays.asList("11000", "01100", "00110", "00011"));
-        List<String> col2 = new java.util.ArrayList<>(Arrays.asList("11011"));
-        List<String> col3 = new java.util.ArrayList<>(Arrays.asList("11101"));
-        List<String> col4 = new java.util.ArrayList<>(Arrays.asList("11000", "01100", "00110", "00011"));
-        List<String> col5 = new java.util.ArrayList<>(Arrays.asList("10000", "01000", "00100", "00010", "00001"));
-        this.colCandidates = new java.util.ArrayList<>(Arrays.asList(col1, col2, col3, col4, col5));
+        ComList<String> col1 = new ComList<>();
+        ComList<String> col2 = new ComList<>();
+        ComList<String> col3 = new ComList<>();
+        ComList<String> col4 = new ComList<>();
+        ComList<String> col5 = new ComList<>();
+        
+        col1.add("11000");
+        col1.add("01100");
+        col1.add("00110");
+        col1.add("00011");
+        
+        col2.add("11011");
+        
+        col3.add("11101");
+        
+        col4.add("11000");
+        col4.add("01100");
+        col4.add("00110");
+        col4.add("00011");
+        
+        col5.add("10000");
+        col5.add("01000");
+        col5.add("00100");
+        col5.add("00010");
+        col5.add("00001");
+
+        this.colCandidates = new ComList<>();
+        this.colCandidates.add(col1);
+        this.colCandidates.add(col2);
+        this.colCandidates.add(col3);
+        this.colCandidates.add(col4);
+        this.colCandidates.add(col5);
         
         int num = new Nonoreducer(this.colCandidates, this.rowCandidates).reduceMutual();
         assertEquals(-1, num);
