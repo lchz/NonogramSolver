@@ -1,9 +1,6 @@
 package solver.domain;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import static java.util.stream.Collectors.toList;
+import solver.util.ComList;
 
 /**
  *
@@ -18,20 +15,21 @@ public class Nonoblock {
      * @param length length of the lines
      * @return All possible combinations for every block in the lines
      */
-    public List<List<String>> getCandidates(List<List<String>> lines, int length) {
-
-        List<List<String>> candidates = new ArrayList<>();
+    public ComList<ComList<String>> getCandidates(ComList<ComList<String>>lines, int length) {
+        ComList<ComList<String>> candidates = new ComList<>();
         
-        for (List<String> line : lines) {
+        for (ComList<String> line: lines) {
             int cellSum = 0;
             for (String l : line) {
                 cellSum += extractInt(l);
             }
 
-            List<String> ones = line.stream().map(d -> repeat(extractInt(d), "1")).collect(toList());
-            List<String> sequences = generateSequences(ones, length - cellSum + 1);
+            ComList<String> ones = new ComList<>();
+            line.stream().map(d -> repeat(extractInt(d), "1")).forEach(ones::add);
             
-            List<String> lineCandidates = new ArrayList<>();
+            ComList<String> sequences = generateSequences(ones, length - cellSum + 1);
+            
+            ComList<String> lineCandidates = new ComList<>();
             
             for (String sequence : sequences) {
                 
@@ -53,18 +51,20 @@ public class Nonoblock {
      * @param numZeros zero numbers in this block
      * @return the list of possible permutations
      */
-    private List<String> generateSequences(List<String> ones, int numZeros) {
+    private ComList<String> generateSequences(ComList<String> ones, int numZeros) {
         if (ones.isEmpty()) {
             String s = repeat(numZeros, "0");
-            return Arrays.asList(s);
+            return convertString(s);
         }
 
-        List<String> result = new ArrayList<>();
+        ComList<String> result = new ComList<>();
+
         for (int x = 1; x < numZeros - ones.size() + 2; x++) {
-            List<String> skipOne = ones.stream().skip(1).collect(toList());
-
-            List<String> tails = generateSequences(skipOne, numZeros - x);
-
+            ComList<String> skipOne = new ComList<>();
+            ones.stream().skip(1).forEach(skipOne::add);
+            
+            ComList<String> tails = generateSequences(skipOne, numZeros - x);
+            
             for (String tail : tails) {
                 result.add(repeat(x, "0") + ones.get(0) + tail);
             }
@@ -76,8 +76,8 @@ public class Nonoblock {
      * Returns a string with a repeated substring
      * 
      * @param n times to repeat
-     * @param substring substring to be repeated
-     * @return 
+     * @param substring a substring to be repeated
+     * @return the reconstucted string
      */
     private String repeat(int n, String substring) {
         String result = "";
@@ -91,10 +91,17 @@ public class Nonoblock {
     /**
      * Converts a string into an integer, if it only consists of integers.
      * 
-     * @param s string for converting
+     * @param s string for converting into integer
      * @return converted integer from string
      */
     private Integer extractInt(String s) {
         return Integer.parseInt(s);
+    }
+    
+    private ComList<String> convertString(String s) {
+        ComList<String> l = new ComList<>();
+        l.add(s);
+        
+        return l;
     }
 }

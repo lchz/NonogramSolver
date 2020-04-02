@@ -1,6 +1,7 @@
 package solver.app;
 
-import java.util.List;
+import solver.util.ComList;
+
 
 /**
  *
@@ -12,8 +13,8 @@ public interface FileReader {
     
     String getName();
 
-    List<List<String>> getRows();
+    ComList<ComList<String>> getRows();
 
-    List<List<String>> getColumns();
+    ComList<ComList<String>> getColumns();
 
 }
