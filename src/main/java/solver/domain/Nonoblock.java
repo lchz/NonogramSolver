@@ -9,11 +9,11 @@ import solver.util.ComList;
 public class Nonoblock {
     
     /**
-     * Generates all possible candidates for every line in the lines.
+     * Generates all possible candidates for every line in this collection.
      * 
      * @param lines data for every block in rows or columns
      * @param length length of the lines
-     * @return All possible combinations for every block in the lines
+     * @return All possible combinations for every block in these lines
      */
     public ComList<ComList<String>> getCandidates(ComList<ComList<String>> lines, int length) {
         ComList<ComList<String>> candidates = new ComList<>();
@@ -98,6 +98,12 @@ public class Nonoblock {
         return Integer.parseInt(s);
     }
     
+    /**
+     * Converts the specific string into a collection of type ComList.
+     * 
+     * @param s string to be converted
+     * @return the collection of type of ComList
+     */
     private ComList<String> convertString(String s) {
         ComList<String> l = new ComList<>();
         l.add(s);

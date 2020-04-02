@@ -14,7 +14,7 @@ public class Main {
         ConsoleIO io = new ConsoleIO();
         
         io.print("Please insert your working directory path "
-                + "(on Linux command line '$ pwd' to verify):");
+                + "(on Linux use command '$ pwd' to verify):");
         
         String home = io.read();
 
