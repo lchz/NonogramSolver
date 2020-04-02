@@ -5,6 +5,9 @@ apply plugin: 'java'
 apply plugin: 'jacoco'
 apply plugin: 'application'
 
+sourceCompatibility = '1.8'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
 mainClassName = 'solver.app.Main'
 
 repositories {
@@ -14,7 +17,6 @@ repositories {
 dependencies {
     testCompile 'junit:junit:4.12'
 }
-
 
 run {
     standardInput = System.in
