@@ -6,12 +6,11 @@ import solver.util.ComList;
 
 /**
  * This class is for reading file and extracting data of this puzzle.
- * 
+ *
  * @author lchz
  */
 public class FileReaderImpl implements FileReader {
 
-    private String home;
     private String puzzle;
 
     private ComList<String> data;
@@ -19,8 +18,7 @@ public class FileReaderImpl implements FileReader {
     private Integer width;
     private Integer height;
 
-    public FileReaderImpl(String home, String puzzle) {
-        this.home = home;
+    public FileReaderImpl(String puzzle) {
         this.puzzle = puzzle;
         this.data = new ComList<>();
     }
@@ -32,7 +30,8 @@ public class FileReaderImpl implements FileReader {
     public void getData() {
 
         try {
-            String path = home + "/src/main/java/solver/files/" + puzzle;
+            String path = "files/" + puzzle;
+
             File file = new File(path.trim());
             Scanner s = new Scanner(file);
 
@@ -46,7 +45,7 @@ public class FileReaderImpl implements FileReader {
 
     /**
      * Extracts name of this puzzle from data.
-     * 
+     *
      * @return name of this puzzle
      */
     @Override
@@ -55,9 +54,9 @@ public class FileReaderImpl implements FileReader {
     }
 
     /**
-     * Constructs rows of this puzzle.
-     * Rows are consisted of a collection of tips.
-     * 
+     * Constructs rows of this puzzle. Rows are consisted of a collection of
+     * tips.
+     *
      * @return constructed rows
      */
     @Override
@@ -67,9 +66,9 @@ public class FileReaderImpl implements FileReader {
     }
 
     /**
-     * Constructs columns of this puzzle.
-     * Columns are consisted of a collection of tips.
-     * 
+     * Constructs columns of this puzzle. Columns are consisted of a collection
+     * of tips.
+     *
      * @return constructed columns
      */
     @Override
@@ -80,7 +79,7 @@ public class FileReaderImpl implements FileReader {
 
     /**
      * Constructs lines from data.
-     * 
+     *
      * @param start index from where to read data
      * @param length length of data to be read
      * @return constructed lines
@@ -97,9 +96,9 @@ public class FileReaderImpl implements FileReader {
     }
 
     /**
-     * Converts the specific string into Integer.
-     * The string should be consisted of only integers.
-     * 
+     * Converts the specific string into Integer. The string should be consisted
+     * of only integers.
+     *
      * @param s string to be extracted
      * @return integer converted from the specific string.
      */
@@ -108,10 +107,10 @@ public class FileReaderImpl implements FileReader {
     }
 
     /**
-     * Converts the specific string into a collection of type ComList.
-     * If the string is consisted of more than one element joined by ',', 
-     * then every element of this string will be appended to this collection of ComList.
-     * 
+     * Converts the specific string into a collection of type ComList. If the
+     * string is consisted of more than one element joined by ',', then every
+     * element of this string will be appended to this collection of ComList.
+     *
      * @param s string to be converted
      * @return the collection of type of ComList
      */

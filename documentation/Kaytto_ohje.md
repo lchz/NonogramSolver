@@ -5,9 +5,7 @@ Tällä hetkellä projekti voi ladata kloonaamalla tai lataamalla ZIP paketin. L
 
 
 ## Sovelluksen käyttö
-Käynnistettäessä sovellus kysyy käyttäjältä polun sovelluksen juurikansioon, joka voi saada selväksi Linux koneen konsolissa komennolla ```$ pwd```. Linux koneella polku voi olla muodossa, esim. ```/home/polku/juurikansioon/NonogramSolver```. 
-
-Seuraavaksi käyttäjältä kysytään, mikä nonogrammin peli halutaan ratkaista. Tähän vastataan jollakin pelin tiedoston nimellä, esim. ```dog.non.txt```. Pelien tiedostojen nimet voi saada kansiosta ```solver/files/``` tai suoraan alta. Käyttäjä voi myös lisätä omia nonogrammin tiedostojaan ratkaisemiseksi. (Huom. Käyttäjän lisäämien tiedostojen sisällöt on oltava samassa muodossa kuin mallitiedostoissa.)
+Käynnistettäessä sovellus kysyy käyttäjältä, mikä nonogrammin peli halutaan ratkaista. Tähän vastataan jollakin pelin tiedoston nimellä, esim. ```dog.non.txt```. Pelien tiedostojen nimet voi saada kansiosta ```/files/``` tai suoraan alta. Käyttäjä voi myös lisätä omia nonogrammin tiedostojaan ratkaisemiseksi. (Huom. Käyttäjän lisäämien tiedostojen sisällöt on oltava samassa muodossa kuin mallitiedostoissa.)
 
 Tämän jälkeen sovellus ratkaisee pelia ja tulokset piirretään loppujen lopuksi näkyviin.
 
