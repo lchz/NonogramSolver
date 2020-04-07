@@ -1,4 +1,4 @@
-package solver.app;
+package solver.io;
 
 import solver.util.ComList;
 

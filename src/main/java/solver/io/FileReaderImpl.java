@@ -1,7 +1,10 @@
-package solver.app;
+package solver.io;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import solver.util.ComList;
 
 /**
@@ -38,8 +41,8 @@ public class FileReaderImpl implements FileReader {
             while (s.hasNextLine()) {
                 data.add(s.nextLine().trim());
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(FileReaderImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
