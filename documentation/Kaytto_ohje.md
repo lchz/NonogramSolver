@@ -13,6 +13,8 @@ Tämän jälkeen sovellus ratkaisee pelia ja tulokset piirretään loppujen lopu
 ## Käytössä olevat pelien tiedostot
 blender.non.txt
 
+different.non.txt
+
 dog.non.txt
 
 gnome.non.txt
@@ -38,3 +40,5 @@ test5.non.txt
 ubuntu.non.txt
 
 wikimedia.non.txt
+
+testFalse.non.txt (Huom. Tällä pelillä ei ole ratkaisua.)
