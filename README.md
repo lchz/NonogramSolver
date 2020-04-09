@@ -5,7 +5,7 @@
 ## Dokumentaatio
 
 - [Määrittelydokumentti](https://github.com/lchz/NonogramSolver/blob/master/documentation/Maarittelydokumentti.md)
-- [Käyttöohje](https://github.com/lchz/NonogramSolver/blob/master/documentation/Kaytto_ohje.md)
+- [Käyttöohje](https://github.com/lchz/NonogramSolver/blob/master/documentation/kaytto-ohje.md)
 - [Testausdokumentti](https://github.com/lchz/NonogramSolver/blob/master/documentation/testausdokumentti.md)
 - Toteutusdokumentti
 
