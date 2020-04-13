@@ -14,3 +14,4 @@
 - [Viikkoraportti 2](https://github.com/lchz/NonogramSolver/blob/master/documentation/Viikkoraportit/viikko-2.md)
 - [Viikkoraportti 3](https://github.com/lchz/NonogramSolver/blob/master/documentation/Viikkoraportit/viikko-3.md)
 - [Viikkoraportti 4](https://github.com/lchz/NonogramSolver/blob/master/documentation/Viikkoraportit/viikko-4.md)
+- [Viikkoraportti 5](https://github.com/lchz/NonogramSolver/blob/master/documentation/Viikkoraportit/viikko-5.md)
