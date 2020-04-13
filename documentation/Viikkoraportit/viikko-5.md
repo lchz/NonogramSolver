@@ -1,7 +1,7 @@
 # Viikkoraportti 5
 
 ## Mitä olen tehnyt
-Tällä viikolla olen käynyt läpi testaukseen liittyviä asioita ja tehnyt lisää yksikkötestauksia pelien tiedoston lukemisluokkaan. Olen myös tehnyt sovelluksen suorituskyvyn testaukset, jossa olen testannut kaikki sovelluksessa olevien pelien keskimääräistä suoritusaikaa. Viimeiseksi olen laatinut testausdokumentin näiden testuksien perusteella.
+Tällä viikolla ensimmäisen vertaisarvioinnin lisäksi olen käynyt läpi testaukseen liittyviä asioita ja tehnyt lisää yksikkötestauksia pelien tiedoston lukemisluokkaan. Olen myös tehnyt sovelluksen suorituskyvyn testaukset, jossa olen testannut kaikki sovelluksessa olevien pelien keskimääräistä suoritusaikaa. Viimeiseksi olen laatinut testausdokumentin näiden testuksien perusteella.
 
 ## Mitä opin
 Olen oppinut lisää testaukseen liittyviä asioita. Ymmärsin, että ohjelman suorituskyvyn testaus on myös keskeinen osa ohjelmaa.
