@@ -4,6 +4,11 @@ import solver.domain.Nonosolver;
 import solver.io.ConsoleIO;
 import solver.io.FileReaderImpl;
 
+
+/**
+ * This class is for testing the program performance.
+ * @author chenhuiz
+ */
 public class Tester {
 
     public static void main(String[] args) {
