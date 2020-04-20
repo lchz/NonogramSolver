@@ -12,7 +12,7 @@ Moduuli `domain` taas käyttää moduulia `util` toteuttaa tietorakenteita. Luok
 ![image](https://github.com/lchz/NonogramSolver/blob/master/documentation/packageDiagram.png "Package diagram")
 
 ## Tietorakenteiden aika- ja tilavaativuudet
-NP-täydellisyyden takia nonogrammin ratkaisijan aikavaativuus on O(2^n)[Lähde 1](https://github.com/lchz/NonogramSolver/edit/master/documentation/toteutusdokumentti.md#lähteet). Tilavaatisuutta on kuitenkin haastava arvioida, koska sen riippuvuus pelin kokoon tai annettujen vihjeiden monimuatkaisuuteen ei ole toistaiseksi tiedossa.
+NP-täydellisyyden takia nonogrammin ratkaisijan aikavaativuus on O(2^n)[[Lähde 1](https://github.com/lchz/NonogramSolver/blob/master/documentation/toteutusdokumentti.md#lähteet)]. Tilavaatisuutta on kuitenkin haastava arvioida, koska sen riippuvuus pelin kokoon tai annettujen vihjeiden monimuatkaisuuteen ei ole toistaiseksi tiedossa.
 
 ### Luokan ComList metodien aikavaativuus
 - `add`, O(1). Jos listan tila on loppunut, sitä laajennetaan ajassa O(n) kutsumalla metodia `doubleSizeArray`
