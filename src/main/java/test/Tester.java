@@ -4,18 +4,18 @@ import solver.domain.Nonosolver;
 import solver.io.ConsoleIO;
 import solver.io.FileReaderImpl;
 
-
 public class Tester {
 
     public static void main(String[] args) {
-        long total = 0;
         
+        long total = 0;
+
         ConsoleIO io = new ConsoleIO();
         io.print("Please choose a puzzle:");
         String puzzle = io.read();
 
         for (int i = 0; i < 100; i++) {
-            
+
             long start = System.nanoTime();
 
             FileReaderImpl data = new FileReaderImpl(puzzle);
@@ -31,7 +31,7 @@ public class Tester {
             total += kesto;
         }
 
-        System.out.println("Average time consumtion for 100 times: " + (total / 100) + " ns");
+        io.print("Average time consumtion for 100 times: " + (total / 100) + " ns");
     }
-    
+
 }
