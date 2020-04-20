@@ -18,6 +18,13 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+task runTester(type: JavaExec) {
+    main = 'test.Tester'
+    //    classpath = configurations.runtime
+    classpath = sourceSets.main.runtimeClasspath
+    standardInput = System.in
+}
+
 run {
     standardInput = System.in
 }
@@ -30,7 +37,7 @@ jacocoTestReport {
     afterEvaluate {
         classDirectories.from = files(classDirectories.files.collect {
                 fileTree(dir: it,
-                         exclude: ['solver/app/**'])
+                    exclude: ['solver/app/**'])
             })
     }
 }

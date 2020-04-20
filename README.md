@@ -6,8 +6,9 @@
 
 - [Määrittelydokumentti](https://github.com/lchz/NonogramSolver/blob/master/documentation/Maarittelydokumentti.md)
 - [Käyttöohje](https://github.com/lchz/NonogramSolver/blob/master/documentation/kaytto-ohje.md)
+- [Toteutusdokumentti]()
 - [Testausdokumentti](https://github.com/lchz/NonogramSolver/blob/master/documentation/testausdokumentti.md)
-- Toteutusdokumentti
+
 
 ## Viikkoraportit
 - [Viikkoraportti 1](https://github.com/lchz/NonogramSolver/blob/master/documentation/Viikkoraportit/viikko-1.md)
@@ -15,3 +16,4 @@
 - [Viikkoraportti 3](https://github.com/lchz/NonogramSolver/blob/master/documentation/Viikkoraportit/viikko-3.md)
 - [Viikkoraportti 4](https://github.com/lchz/NonogramSolver/blob/master/documentation/Viikkoraportit/viikko-4.md)
 - [Viikkoraportti 5](https://github.com/lchz/NonogramSolver/blob/master/documentation/Viikkoraportit/viikko-5.md)
+- [Viikkoraportti 6](https://github.com/lchz/NonogramSolver/blob/master/documentation/Viikkoraportit/viikko-6.md)

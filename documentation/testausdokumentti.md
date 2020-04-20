@@ -28,14 +28,14 @@ Tietorakenteille on toteutettu tesit niiden yleisesti käyttäytymiselle. ComLis
 
 
 ## Suorituskykytestaus
-Tässä on listattuna pelien keskimääräinen suoritusaika. Suorituksia on käyty 100 kertaa jokaista peliä kohten.
+Suorituskykytestauksen lähdekoodi sijaitsee kansiossa `src/main/java/test`. Suorituksia on käyty 100 kertaa jokaista peliä kohten. Suorituskykytestausta voidaan suorittaa komennolla `./gradlew -q -console plain runTester`. Tässä on listattuna pelien keskimääräiset suoritusajat. Sovellus ei kuitenkaan pysty ratkaisemaan liian monimutkaisia pelejä, jossa peli kooltaan on liian suuri. Olemassa olevien pelitiedostojen mukaan kahta peliä ei saada ratkaistua, joista toinen on kooltaan 40 x 40 ja toinen 30 x 55.
 
 |Peli    | Koko (leveys x korkeus) | Suoritusaika, ka (s) |
 |:---------------:|:-------:|:------------:|
 |different.non.txt| 20x20 | 0.194824486 |
-|blender.non.txt  | 30x25 | 0.107006566|
-|dog.non.txt      | 8x9   | 0.009145199 |
-|gnome.non.txt    | 27x34 | 0.0172733783 |
+|blender.non.txt  | 30x25 | 0.107006566 |
+|dog.non.txt      | 8x9   | 0.007496123 |
+|gnome.non.txt    | 27x34 | 0.0172733783|
 |goat.non.txt     | 25x34 | 0.244884989 |
 |heart.non.txt    | 15x15 | 0.024796876 |
 |horse.non.txt    | 16x21 | 0.046682994 |
@@ -46,7 +46,12 @@ Tässä on listattuna pelien keskimääräinen suoritusaika. Suorituksia on käy
 |test20.non.txt   | 20x20 | 0.084324367 |
 |ubuntu.non.txt   | 35x35 | 1.612942403 |
 |wikimedia.non.txt| 39x28 | 1.188770042 |
+|guilty.non.txt   | 25x30 | 0.116933260 |
+|halloween.non.txt| 25x25 | 4.741648634 |
+|nomageddon.non.txt| 20x30| 0.841957307 |
+|iron.non.txt| 30x55 | - |
+|john.non.txt| 40x40 | - |
 
 
 ## Testien toistoa
-Kaikki testit ovat Junit-yksikkötestejä ja ne voi suorittaa ilman mitään erityistä dataa.
+Kaikki testit paitsi suorituskykytestaus ovat Junit-yksikkötestejä ja ne voi suorittaa ilman mitään erityistä dataa.
