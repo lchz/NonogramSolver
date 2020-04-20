@@ -9,7 +9,7 @@ Varsinaiset pelin ratkaisijan muodostavat luokat sijaitsevat moduulissa `domain`
 
 Moduuli `domain` taas käyttää moduulia `util` toteuttaa tietorakenteita. Luokka `ComList` vastaa Javan ArrayList:a ja `ComIterator` Iterator:a.
 
-![image]( "Package diagram")
+![image](https://github.com/lchz/NonogramSolver/blob/master/documentation/packageDiagram.png "Package diagram")
 
 ## Tietorakenteiden aika- ja tilavaativuudet
 NP-täydellisyyden takia nonogrammin ratkaisijan aikavaativuus on O(2^n)[Lähde 1]. Tilavaatisuutta on kuitenkin haastava arvioida, koska sen riippuvuus pelin kokoon tai annettujen vihjeiden monimuatkaisuuteen ei ole toistaiseksi tiedossa.
