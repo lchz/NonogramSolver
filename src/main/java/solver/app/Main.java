@@ -5,7 +5,7 @@ import solver.io.ConsoleIO;
 import solver.domain.Nonosolver;
 
 /**
- *
+ * This is main class for running the program.
  * @author lchz
  */
 public class Main {

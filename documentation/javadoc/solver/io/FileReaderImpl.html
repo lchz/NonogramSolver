@@ -115,7 +115,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">solver.app</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">solver.io</a></div>
 <h2 title="Class FileReaderImpl" class="title">Class FileReaderImpl</h2>
 </div>
 <div class="contentContainer">
@@ -123,7 +123,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>solver.app.FileReaderImpl</li>
+<li>solver.io.FileReaderImpl</li>
 </ul>
 </li>
 </ul>
@@ -132,12 +132,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="FileReader.html" title="interface in solver.app">FileReader</a></code></dd>
+<dd><code><a href="FileReader.html" title="interface in solver.io">FileReader</a></code></dd>
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">FileReaderImpl</span>
 extends java.lang.Object
-implements <a href="FileReader.html" title="interface in solver.app">FileReader</a></pre>
+implements <a href="FileReader.html" title="interface in solver.io">FileReader</a></pre>
 <div class="block">This class is for reading file and extracting data of this puzzle.</div>
 </li>
 </ul>
@@ -159,8 +159,7 @@ implements <a href="FileReader.html" title="interface in solver.app">FileReader<
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String)">FileReaderImpl</a></span>&#8203;(java.lang.String&nbsp;home,
-              java.lang.String&nbsp;puzzle)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String)">FileReaderImpl</a></span>&#8203;(java.lang.String&nbsp;puzzle)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -233,14 +232,13 @@ implements <a href="FileReader.html" title="interface in solver.app">FileReader<
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a id="&lt;init&gt;(java.lang.String,java.lang.String)">
+<a id="&lt;init&gt;(java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>FileReaderImpl</h4>
-<pre>public&nbsp;FileReaderImpl&#8203;(java.lang.String&nbsp;home,
-                      java.lang.String&nbsp;puzzle)</pre>
+<pre>public&nbsp;FileReaderImpl&#8203;(java.lang.String&nbsp;puzzle)</pre>
 </li>
 </ul>
 </li>
@@ -263,7 +261,7 @@ implements <a href="FileReader.html" title="interface in solver.app">FileReader<
 <div class="block">Reads data from a specific file.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="FileReader.html#getData()">getData</a></code>&nbsp;in interface&nbsp;<code><a href="FileReader.html" title="interface in solver.app">FileReader</a></code></dd>
+<dd><code><a href="FileReader.html#getData()">getData</a></code>&nbsp;in interface&nbsp;<code><a href="FileReader.html" title="interface in solver.io">FileReader</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -277,7 +275,7 @@ implements <a href="FileReader.html" title="interface in solver.app">FileReader<
 <div class="block">Extracts name of this puzzle from data.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="FileReader.html#getName()">getName</a></code>&nbsp;in interface&nbsp;<code><a href="FileReader.html" title="interface in solver.app">FileReader</a></code></dd>
+<dd><code><a href="FileReader.html#getName()">getName</a></code>&nbsp;in interface&nbsp;<code><a href="FileReader.html" title="interface in solver.io">FileReader</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>name of this puzzle</dd>
 </dl>
@@ -290,11 +288,11 @@ implements <a href="FileReader.html" title="interface in solver.app">FileReader<
 <li class="blockList">
 <h4>getRows</h4>
 <pre class="methodSignature">public&nbsp;<a href="../util/ComList.html" title="class in solver.util">ComList</a>&lt;<a href="../util/ComList.html" title="class in solver.util">ComList</a>&lt;java.lang.String&gt;&gt;&nbsp;getRows()</pre>
-<div class="block">Constructs rows of this puzzle.
- Rows are consisted of a collection of tips.</div>
+<div class="block">Constructs rows of this puzzle. Rows are consisted of a collection of
+ tips.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="FileReader.html#getRows()">getRows</a></code>&nbsp;in interface&nbsp;<code><a href="FileReader.html" title="interface in solver.app">FileReader</a></code></dd>
+<dd><code><a href="FileReader.html#getRows()">getRows</a></code>&nbsp;in interface&nbsp;<code><a href="FileReader.html" title="interface in solver.io">FileReader</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>constructed rows</dd>
 </dl>
@@ -307,11 +305,11 @@ implements <a href="FileReader.html" title="interface in solver.app">FileReader<
 <li class="blockList">
 <h4>getColumns</h4>
 <pre class="methodSignature">public&nbsp;<a href="../util/ComList.html" title="class in solver.util">ComList</a>&lt;<a href="../util/ComList.html" title="class in solver.util">ComList</a>&lt;java.lang.String&gt;&gt;&nbsp;getColumns()</pre>
-<div class="block">Constructs columns of this puzzle.
- Columns are consisted of a collection of tips.</div>
+<div class="block">Constructs columns of this puzzle. Columns are consisted of a collection
+ of tips.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="FileReader.html#getColumns()">getColumns</a></code>&nbsp;in interface&nbsp;<code><a href="FileReader.html" title="interface in solver.app">FileReader</a></code></dd>
+<dd><code><a href="FileReader.html#getColumns()">getColumns</a></code>&nbsp;in interface&nbsp;<code><a href="FileReader.html" title="interface in solver.io">FileReader</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>constructed columns</dd>
 </dl>

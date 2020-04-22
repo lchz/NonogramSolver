@@ -4,7 +4,7 @@ import solver.util.ComList;
 
 
 /**
- *
+ * Interface for reading files and storing hints.
  * @author lchz
  */
 public interface FileReader {

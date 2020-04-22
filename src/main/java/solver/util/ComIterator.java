@@ -1,7 +1,7 @@
 package solver.util;
 
 /**
- *
+ * This is a data structure for iterator.
  * @author lchz
  * @param <E> the type of elements returned by this iterator
  */

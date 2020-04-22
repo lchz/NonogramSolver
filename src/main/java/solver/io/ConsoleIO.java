@@ -3,7 +3,7 @@ package solver.io;
 import java.util.Scanner;
 
 /**
- *
+ * This class is for reading inputs and print outputs.
  * @author lchz
  */
 public class ConsoleIO implements IO {

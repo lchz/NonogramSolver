@@ -5,7 +5,7 @@ import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 /**
- *
+ * This is a data structure for ArrayList.
  * @author lchz
  * @param <E> the type of items returned by this collection
  */

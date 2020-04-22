@@ -4,7 +4,7 @@ import solver.io.IO;
 import solver.util.ComList;
 
 /**
- *
+ * This class is for solving Nonogram.
  * @author lchz
  */
 public class Nonosolver {

@@ -2,7 +2,7 @@
 package solver.io;
 
 /**
- *
+ * IO interface.
  * @author lchz
  */
 public interface IO {

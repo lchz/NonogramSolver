@@ -3,7 +3,7 @@ package solver.domain;
 import solver.util.ComList;
 
 /**
- *
+ * This class is for generating all possible combination of every line according to its hints.
  * @author lchz
  */
 public class Nonoblock {

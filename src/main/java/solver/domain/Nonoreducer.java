@@ -4,7 +4,7 @@ import solver.util.ComIterator;
 import solver.util.ComList;
 
 /**
- *
+ * This class is for reduce the impossible combination of every line.
  * @author lchz
  */
 public class Nonoreducer {
