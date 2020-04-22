@@ -51,7 +51,7 @@ Tässä on listattuna pelien keskimääräiset suoritusajat. Suorituksia on käy
 |john.non.txt| 40x40 | - |
 
 ## Puutteet ja parannusehdot
-Sovelluksen isoin puute on sen ulkonäkö. Tässä JavaFX olisi hyvä työkalu toteuttaa sovelluksen graafista esitystä. Sovellus voidaan toki laajentaa siten, että ensiksi käyttäjä pystyy itse ratkaisemaan peliä. Pelin tulos voi tarvittaessa näkyä painiketta painaamalla.
+Sovelluksen isoin puute on sen ulkonäkö. Tässä JavaFX olisi hyvä työkalu toteuttaa sovelluksen graafista esitystä. Sovellus voidaan toki laajentaa siten, että ensiksi käyttäjä pystyisi itse ratkaisemaan peliä. Pelin tulos voisi tarvittaessa näkyä painiketta painaamalla. Lisäksi sovelluksen suorituskykyä voitaisiin optimoida jatkossa, jotta sillä voisi ratkaista enemmän isompia pelejä.
 
 ## Lähteet
 1. http://fse.studenttheses.ub.rug.nl/15287/1/Master_Educatie_2017_RAOosterman.pdf
