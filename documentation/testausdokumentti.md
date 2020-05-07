@@ -41,7 +41,8 @@ Suorituskykytestauksen lähdekoodi sijaitsee kansiossa `src/main/java/test`. Suo
 |horse.non.txt    | 16x21 | 0.046682994 |
 |rabbit.non.txt   | 15x15 | 0.037845554 |
 |spade.non.txt    | 23x23 | 0.033163153 |
-|test5.non.txt    | 10x10 | 0.003220731 |
+|test5.non.txt    | 5x5   | 0.003757788 |
+|test10.non.txt   | 10x10 | 0.016928362 |
 |test15.non.txt   | 15x15 | 0.032875215 |
 |test20.non.txt   | 20x20 | 0.084324367 |
 |ubuntu.non.txt   | 35x35 | 1.612942403 |

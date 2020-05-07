@@ -31,16 +31,17 @@ Tässä on listattuna pelien keskimääräiset suoritusajat. Suorituksia on käy
 |Peli    | Koko (leveys x korkeus) | Suoritusaika, ka (s) |
 |:---------------:|:-------:|:------------:|
 |different.non.txt| 20x20 | 0.194824486 |
-|blender.non.txt  | 30x25 | 0.107006566|
-|dog.non.txt      | 8x9   | 0.009145199 |
-|gnome.non.txt    | 27x34 | 0.0172733783 |
+|blender.non.txt  | 30x25 | 0.107006566 |
+|dog.non.txt      | 8x9   | 0.007496123 |
+|gnome.non.txt    | 27x34 | 0.171750875 |
 |goat.non.txt     | 25x34 | 0.244884989 |
 |heart.non.txt    | 15x15 | 0.024796876 |
 |horse.non.txt    | 16x21 | 0.046682994 |
 |rabbit.non.txt   | 15x15 | 0.037845554 |
 |spade.non.txt    | 23x23 | 0.033163153 |
-|test5.non.txt    | 10x10 | 0.003220731 |
-|test15.non.txt   | 15x15 | 0.032875215 |
+|test5.non.txt    | 5x5   | 0.003757788 |
+|test10.non.txt   | 10x10 | 0.016928362 |
+|test15.non.txt   | 15x15 | 0.031954432 |
 |test20.non.txt   | 20x20 | 0.084324367 |
 |ubuntu.non.txt   | 35x35 | 1.612942403 |
 |wikimedia.non.txt| 39x28 | 1.188770042 |
@@ -49,6 +50,7 @@ Tässä on listattuna pelien keskimääräiset suoritusajat. Suorituksia on käy
 |nomageddon.non.txt| 20x30| 0.841957307 |
 |iron.non.txt| 30x55 | - |
 |john.non.txt| 40x40 | - |
+
 
 ## Puutteet ja parannusehdot
 Sovelluksen isoin puute on sen ulkonäkö. Tässä JavaFX olisi hyvä työkalu toteuttaa sovelluksen graafista esitystä. Sovellus voidaan toki laajentaa siten, että ensiksi käyttäjä pystyisi itse ratkaisemaan peliä. Pelin tulos voisi tarvittaessa näkyä painiketta painaamalla. Lisäksi sovelluksen suorituskykyä voitaisiin optimoida jatkossa, jotta sillä voisi ratkaista enemmän isompia pelejä.
