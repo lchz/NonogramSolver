@@ -9,6 +9,7 @@
 - [Toteutusdokumentti](https://github.com/lchz/NonogramSolver/blob/master/documentation/toteutusdokumentti.md)
 - [Testausdokumentti](https://github.com/lchz/NonogramSolver/blob/master/documentation/testausdokumentti.md)
 - [Javadoc](https://github.com/lchz/NonogramSolver/tree/master/documentation/javadoc)
+- [Release v1.0](https://github.com/lchz/NonogramSolver/releases/tag/v1.0)
 
 
 ## Viikkoraportit
