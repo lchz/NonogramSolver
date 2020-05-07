@@ -51,6 +51,17 @@ Tässä on listattuna pelien keskimääräiset suoritusajat. Suorituksia on käy
 |iron.non.txt| 30x55 | - |
 |john.non.txt| 40x40 | - |
 
+Kuvaaja suorituskyvystä näyttää seuravanlaiselta. Kuvaajan vaaka-akselilla on muuttujana pelin koko ja pystyakselilla on suoritusaika sekunnissa.
+
+![suoritusaika]()
+
+Kuvaajasta voidaan päätellä, että suoritusaika kasvaa pelin koon kasvaessa, mutta niiden riippuvuus ei ole kiinteästi lineaarinen, koska suoritusaikaan vaikuttaa myös pelin vihjeiden monimutkaisuus. Toisin sanoen pelien suoritusajat voisivat poiketa toisistaan, jos toiselle on annettu monimutkaisempia vihjeitä, vaikka niiden koot ovat samoja. Esimerkiksi kuvaajassa pelien 12, 13 ja 14 koot ovat samanlaisia, mutta pelin 12 suoritukseen tarvitaan huomattavasti enemmän aikaa. Sehän joutuu vihjeiden monimutkaisuudesta.  
+ 
+ 
+ Toisaalta pienemmän pelin suoritukseen voisi käyttää enemmänkin aikaa kuin isomman pelin, jos isommassa pelissä on käytetty yksinkertaisempia vihjeitä, kuten kuvaajassa peli 12 ja 18 näyttävät.
+
+
+
 
 ## Puutteet ja parannusehdot
 Sovelluksen isoin puute on sen ulkonäkö. Tässä JavaFX olisi hyvä työkalu toteuttaa sovelluksen graafista esitystä. Sovellus voidaan toki laajentaa siten, että ensiksi käyttäjä pystyisi itse ratkaisemaan peliä. Pelin tulos voisi tarvittaessa näkyä painiketta painaamalla. Lisäksi sovelluksen suorituskykyä voitaisiin optimoida jatkossa, jotta sillä voisi ratkaista enemmän isompia pelejä.
