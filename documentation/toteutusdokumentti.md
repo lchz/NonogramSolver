@@ -57,7 +57,7 @@ Kuvaaja suorituskyvystä näyttää seuravanlaiselta. Kuvaajan vaaka-akselilla o
 
 Kuvaajasta voidaan päätellä, että suoritusaika kasvaa pelin koon kasvaessa, mutta niiden riippuvuus ei ole kiinteästi lineaarinen, koska suoritusaikaan vaikuttaa myös pelin vihjeiden monimutkaisuus. Toisin sanoen pelien suoritusajat voisivat poiketa toisistaan, jos toiselle on annettu monimutkaisempia vihjeitä, vaikka niiden koot ovat samoja. Esimerkiksi kuvaajassa pelin 12, 13 ja 14 koot ovat samanlaisia, mutta pelin 12 suoritukseen tarvitaan huomattavasti enemmän aikaa. Sehän joutuu vihjeiden monimutkaisuudesta.  
  
-Toisaalta pienemmän pelin suoritukseen voisi käyttää enemmänkin aikaa kuin isomman pelin, jos isommassa pelissä viehjeiden anto suhteellisen yksinkertaisempi, kuten kuvaajassa peli 12 ja 18 näyttävät.
+Toisaalta pienemmän pelin suoritukseen voisi käyttää enemmänkin aikaa kuin isomman pelin, jos isommassa pelissä viehjeiden anto on suhteellisen yksinkertaisempi, kuten kuvaajassa peli 12 ja 18 näyttävät.
 
 
 ## Puutteet ja parannusehdot
