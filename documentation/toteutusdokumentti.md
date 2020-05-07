@@ -53,7 +53,7 @@ Tässä on listattuna pelien keskimääräiset suoritusajat. Suorituksia on käy
 
 Kuvaaja suorituskyvystä näyttää seuravanlaiselta. Kuvaajan vaaka-akselilla on muuttujana pelin koko ja pystyakselilla on suoritusaika sekunnissa.
 
-![suoritusaika]()
+![suoritusaika](https://github.com/lchz/NonogramSolver/blob/master/documentation/suoritukset.png)
 
 Kuvaajasta voidaan päätellä, että suoritusaika kasvaa pelin koon kasvaessa, mutta niiden riippuvuus ei ole yksinkertaisesti lineaarinen, koska suoritusaikaan vaikuttaa myös pelin vihjeiden monimutkaisuus. Toisin sanoen pelien suoritusajat voisivat poiketa toisistaan huomattavasti, jos toiselle on annettu monimutkaisempia vihjeitä kuin toiselle, vaikka niiden koot ovat samoja. Esimerkiksi kuvaajassa piesteiden 12, 13 ja 14 viitattujen pelien koot ovat samanlaisia, mutta pelin 12 suoritukseen tarvitaan huomattavasti enemmän aikaa. Sehän joutuu vihjeiden monimutkaisuudesta.  
  
