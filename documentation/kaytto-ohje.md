@@ -1,7 +1,7 @@
 # Käyttöohje
 
 ## Asennusohjeet
-Tällä hetkellä projekti voi ladata kloonaamalla tai lataamalla ZIP paketin. Latauksen jälkeen sovellus käynnistyy komennolla `./gradlew -q -console plain run` sovelluksen juurikansiossa nimeltään `/NonogramSolver`.
+Sovellus voi ladata kloonaamalla tai lataamalla ZIP paketin. Latauksen jälkeen sovellus käynnistyy komennolla `./gradlew -q -console plain run` sovelluksen juurikansiossa nimeltään `/NonogramSolver`.
 
 
 ## Sovelluksen käyttö
